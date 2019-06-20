@@ -1,11 +1,12 @@
-package com.redhat.training;
+package org.apache.camel.training;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.training.route.FileRouteBuilderV4;
 
-public class CamelStandalone {
+public class SimpleMain {
 
-	public static void main(String[] args)throws Exception{
+    public static void main(String[] args)throws Exception{
         // create a new CamelContext
         CamelContext camelContext = new DefaultCamelContext();
 
@@ -21,6 +22,6 @@ public class CamelStandalone {
 
         // stop and shutdown Camel
         //camelContext.stop();
-	}
+    }
 
 }

@@ -1,13 +1,13 @@
-package com.redhat.training;
+package org.apache.camel.training.route;
 
 import org.apache.camel.builder.RouteBuilder;
 
-public class FileRouteBuilderV4 extends RouteBuilder {
+public class FileRouteBuilderV3 extends RouteBuilder {
 	@Override
 	public void configure() throws Exception {
 		from("file:orders/incoming/?include=order.*")
 		.log("order content: ${body}")
-		.process(new ExchangePrinter())
+		.log("order meta: ${headers}")
 		.to("file:orders/outgoing/?fileExist=fail");
 	}
 }

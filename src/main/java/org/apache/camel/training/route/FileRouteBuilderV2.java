@@ -1,4 +1,4 @@
-package com.redhat.training;
+package org.apache.camel.training.route;
 
 import org.apache.camel.builder.RouteBuilder;
 
